@@ -1,0 +1,23 @@
+{
+  "name": "tabs",
+  "version": "1.0.0",
+  "description": "tabs",
+  "main": "webpack.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guocover/tabs.git"
+  },
+  "author": "coverguo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guocover/tabs/issues"
+  },
+  "homepage": "https://github.com/Guocover/tabs#readme"
+}
