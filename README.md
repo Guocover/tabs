@@ -57,5 +57,33 @@ const defaults = {
 };
 ```
 
+## apis
+
+```javascript
+  /**
+   * 设置当前tab的item为active
+   * @param index active对象的坐标
+   */
+  active(index) {
+  }
+  /**
+   * 失效指定index的
+   * @param [index]
+   */
+  disable(index) {
+  }
+  /**
+   * enable 生效指定index的tab
+   */
+  enable(index) {
+  }
+  /**
+   * option 跟option相关的操作，根据参数区分读或者写
+   * @param [string] optionName 为字符串
+   * @param value 配合字符串optionName使用
+   */
+  option(optionName, value) {
+  }
+```
 
 
