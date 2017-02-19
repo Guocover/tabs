@@ -1,0 +1,23 @@
+
+
+
+.tabs .tabs-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.tabs .tabs-tab {
+    display: inline-block;
+    margin: 0;
+    list-style: none;
+}
+
+.tabs .tabs-panel {
+    padding: 15px;
+    display: none;
+}
+
+.tabs .tabs-panel.z-active {
+    display: block;
+}
+
