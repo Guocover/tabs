@@ -1,1 +1,61 @@
 /*demo的样式*/
+
+#tabs-panel-1 {
+	background: #0ff;
+}
+#tabs-panel-2{
+	background: #f0f;
+}
+#tabs-panel-3 {
+	background: #ff0;
+}
+
+
+#tabs-panel-4 {
+	background: #0ff;
+}
+#tabs-panel-5{
+	background: #f0f;
+}
+#tabs-panel-6 {
+	background: #ff0;
+}
+#tabs-panel-7 {
+	background: #f00;
+}
+
+
+/*replace classes*/
+.replace-tabs-nav{
+	list-style: none;
+	border-bottom: 1px solid #ddd;
+	padding: 0;
+}
+
+.replace-nav-item{
+	background: #7cb1ff;
+	display: block;
+	width: 120px;
+	text-align: center;
+}
+.replace-nav-item.tabs-state-active{
+    background: #3079e4;
+}
+
+.replace-nav-item.tabs-state-disabled{
+    background: #e2e2e2;
+}
+
+.tabs .replace-nav-anchor{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.tabs-state-disabled .replace-nav-anchor{
+    color: #f0f0f0;
+}
+
+

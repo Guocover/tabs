@@ -4,26 +4,93 @@
     <meta charset="UTF-8">
     <title>tabs component</title>
     <link rel="stylesheet" href="./css/tabs.css">
+    <link rel="stylesheet" href="./css/demo.css">
 </head>
 <body>
-    <div id="tabs">
-        <ul class="tabs-nav">
+    <div id="tabs-1">
+        <ul>
             <li><a href="#tabs-panel-1">first</a></li>
             <li><a href="#tabs-panel-2">second</a></li>
             <li><a href="#tabs-panel-3">third</a></li>
         </ul>
-        <div id="tabs-panel">
+        <div id="tabs-panel-1">
+            first panel
         </div>
-        <div id="tabs-panel">
+        <div id="tabs-panel-2">
+            second panel
         </div>
-        <div id="tabs-panel">
+        <div id="tabs-panel-3">
+            third panel
         </div>
     </div>
+
+    <div id="tabs-2">
+        <ul>
+            <li><a href="#tabs-panel-4">forth</a></li>
+            <li><a href="#tabs-panel-5">fifth</a></li>
+            <li><a href="#tabs-panel-6">sixth</a></li>
+            <li><a href="#tabs-panel-7">seventh</a></li>
+        </ul>
+        <div id="tabs-panel-4">
+            forth panel
+        </div>
+        <div id="tabs-panel-5">
+            fifth panel
+        </div>
+        <div id="tabs-panel-6">
+            sixth panel
+        </div>
+        <div id="tabs-panel-7">
+            seventh panel
+        </div>
+    </div>
+
+    <div class="operation">
+        <button onclick={selectSecond();}>选中tab1 第2个</button>
+        <button onclick={disablefirst();}>disabled tab1 第1个</button>
+        <button onclick={enableThird();}>enabled tab2 第3个</button>
+        <button onclick={getOption();}>获取 tab2 option event</button>
+    </div
 </body>
 <script src="./js/tabs.js"></script>
 <script type="text/javascript">
-        
+    let element = document.getElementById('tabs-1');
+    let element2 = document.getElementById('tabs-2');
+    // 设置tab    
+    let tab = new Tabs(element);
+    let tab2 = new Tabs(element2, {
+        active: 1, //  设置第二个
+        disabled: [2], // 设置第三个个disabled
+        event: 'mouseover', // 设置切换事件为mouseover
+        beforeActivate: (tab) =>{
+            console.log('切换前回调', tab);
+        },
+        afterActivate: (tab) => {
+            console.log('切换后回调', tab);
+        },
+        classes: {
+            tabNav: 'replace-tabs-nav', // 替换tabNav
+            tab: 'replace-nav-item', // 替换tab
+            anchor: 'replace-nav-anchor', // 替换anchor
+        }
+    });
+    console.log(tab2)
 
+    function selectSecond() {
+        tab.active(1);
+    }
+
+    function disablefirst() {
+        tab.disable(0);
+    }
+
+    function enableThird() {
+        tab2.enable(2);
+    }
+
+    function getOption() {
+        console.log(tab2.option('event'));
+    }
 
 </script>
 </html>
