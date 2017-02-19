@@ -1,5 +1,7 @@
 # tabs
-tabs ui component,
+tabs ui component
+
+## demo
 [demo](https://guocover.github.io/tabs/demo.html)
 
 
