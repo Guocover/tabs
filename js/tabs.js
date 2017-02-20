@@ -57,20 +57,17 @@ class Tabs {
      * @param {object} options - 配置参数
      */
     constructor(element, options = {}){
-        // 第一个参数需要为selector且
+        // 第一个参数需要为element
         if (!element) {
             console.error('must need param elment');
             return null;
         }
-
         // 获取element
         this.element = element;
         this.tabs = [];
-        
         // 合并options
         this.options = Object.assign({}, defaults, options);
         this.options.classes = Object.assign({}, defaults.classes, options.classes);
-
         // 初始化
         this._init();
     }
