@@ -1,6 +1,11 @@
 # tabs
 tabs ui component
 
+## features
+- use es6
+- pure component, not need jquery
+
+
 ## demo
 [demo](https://guocover.github.io/tabs/demo.html)
 
