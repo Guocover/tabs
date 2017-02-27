@@ -9,12 +9,7 @@ const noop = () => {};
 
 // 工具函数，判断元素是否在对下中
 function inArray(search, array){
-    for(let i in array){
-        if (array[i] == search) {
-            return true;
-        }
-    }
-    return false;
+    return array.indexOf(search) > -1;
 }
 
 // 工具函数-事件绑定

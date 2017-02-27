@@ -48,6 +48,7 @@
 .tabs .tabs-panel {
     padding: 15px;
     display: none;
+    border: 1px solid #999;
 }
 
 .tabs .tabs-panel.tabs-state-active{

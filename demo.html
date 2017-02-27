@@ -56,8 +56,10 @@
 <script type="text/javascript">
     let element = document.getElementById('tabs-1');
     let element2 = document.getElementById('tabs-2');
+
     // 设置tab    
     let tab = new Tabs(element);
+    // 自定义配置的tab
     let tab2 = new Tabs(element2, {
         active: 1, //  设置第二个
         disabled: [2], // 设置第三个个disabled
@@ -72,25 +74,21 @@
             tabNav: 'replace-tabs-nav', // 替换tabNav
             tab: 'replace-nav-item', // 替换tab
             anchor: 'replace-nav-anchor', // 替换anchor
+            panel: 'replace-nav-panel', // 替换anchor
         }
     });
-    console.log(tab2)
 
     function selectSecond() {
         tab.active(1);
     }
-
     function disablefirst() {
         tab.disable(0);
     }
-
     function enableThird() {
         tab2.enable(2);
     }
-
     function getOption() {
         console.log(tab2.option('event'));
     }
-
 </script>
 </html>
